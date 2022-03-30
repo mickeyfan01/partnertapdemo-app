@@ -1,7 +1,7 @@
 accelerator:
   displayName: partnertapdemo
   description: TAP Demo for Tanzu Partners
-  iconUrl: https://github.com/dineshtripathi30/icons/blob/master/2438322212642_50d4be51a586eb0dc065_132.png
+  iconUrl: https://raw.githubusercontent.com/dineshtripathi30/icons/master/2438322212642_50d4be51a586eb0dc065_132.png
   tags:
   - simple
   - java
