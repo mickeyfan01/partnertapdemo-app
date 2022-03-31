@@ -13,7 +13,7 @@ accelerator:
     label: Prefix for the container image repository
     defaultValue: tanzudemoreg.azurecr.io/build-service
     required: true
-  - name: namespace
+  - name: appnamespace
     inputType: text
     label: Enter the namespace where application will be deployed
     defaultValue: default
