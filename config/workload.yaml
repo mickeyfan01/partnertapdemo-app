@@ -26,6 +26,6 @@ spec:
     limits:
       memory: 1Gi
       cpu: 2000m
-    env:
-      - name: SPRING_PROFILES_ACTIVE
-        value: springdemo
+  env:
+    - name: SPRING_PROFILES_ACTIVE
+      value: springdemo
