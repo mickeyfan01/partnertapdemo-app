@@ -7,10 +7,16 @@ accelerator:
   - java
   - springboot
   options:
+
   - name: repositoryPrefix
     inputType: text
     label: Prefix for the container image repository
     defaultValue: tanzudemoreg.azurecr.io/build-service
+    required: true
+  - name: namespace
+    inputType: text
+    label: Enter the namespace where application will be deployed
+    defaultValue: default
     required: true
   - name: toggle
     display: true
@@ -23,5 +29,34 @@ accelerator:
       Text line 1
       Text line 2
 engine:
-  include:
-  - '**'
+  merge:
+  - include: [ "**/*" ]
+    exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml" ]
+  - include: [ "config/*.yaml", "Tiltfile" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: partnertapdemo
+        with: "#artifactId"
+    - type: ReplaceText
+      substitutions:
+      - text: your-registry.io/project
+        with: "#repositoryPrefix"
+    - type: ReplaceText
+      substitutions:
+      - text: appnamespace
+        with: "#appnamespace"
+  - include: [ "README.md" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: tapdemo
+        with: "#artifactId"
+  - include: [ "catalog/*.yaml" ]
+    chain:
+    - type: ReplaceText
+      substitutions:
+      - text: tapdemo
+        with: "#artifactId"
+    - type: RewritePath
+      rewriteTo: "#filename"
