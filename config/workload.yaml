@@ -7,6 +7,7 @@ metadata:
     apps.tanzu.vmware.com/has-tests: "true"
     app.kubernetes.io/part-of: partnertapdemo
 spec:
+  serviceAccountName: default
   params:
   - name: annotations
     value:
@@ -14,8 +15,10 @@ spec:
   source:
     git:
       url: https://github.com/dineshtripathi30/partnertapdemo
-      ref:
+      ref: 
         branch: main
+#        tag: "v0.0.1"
+#        commit: "abc" 
   resources:
     requests:
       memory: 100Mi
@@ -23,6 +26,6 @@ spec:
     limits:
       memory: 1Gi
       cpu: 2000m
-  env:
-    - name: SPRING_PROFILES_ACTIVE
-      value: springdemo
+    env:
+      - name: SPRING_PROFILES_ACTIVE
+        value: springdemo
