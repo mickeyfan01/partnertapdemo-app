@@ -1,0 +1,10 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: partnertapdemo
+spec:
+  git:
+    url: https://github.com/dineshtripathi30/partnertapdemo
+    ref:
+      branch: main
+    interval: 30s
