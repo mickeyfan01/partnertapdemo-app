@@ -31,7 +31,7 @@ accelerator:
 engine:
   merge:
   - include: [ "**/*" ]
-    exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml" ]
+    exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml", "partnertapdemo-accelerator.yaml" ]
   - include: [ "config/*.yaml", "Tiltfile" ]
     chain:
     - type: ReplaceText
