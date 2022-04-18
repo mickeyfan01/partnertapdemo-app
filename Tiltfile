@@ -20,4 +20,4 @@ k8s_custom_deploy(
 
 k8s_resource('partnertapdemo', port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': 'partnertapdemo'}])
-allow_k8s_contexts('tapakscluster')
+allow_k8s_contexts('dttapdemo')
