@@ -12,6 +12,6 @@ public class HelloController {
 	}
 	@RequestMapping("/tap")
 	public String tap() {
-		return "Great to be here huh";
+		return "Great to be here huh , go tanzu";
 	}
 }
