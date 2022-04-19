@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#ignore workload
+config/workload.yaml
+/Tiltfile
