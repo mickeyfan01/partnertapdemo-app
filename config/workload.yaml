@@ -36,3 +36,12 @@ spec:
   env:
     - name: SPRING_PROFILES_ACTIVE
       value: springdemo
+  
+  # ServiceClaims to be bound through ServiceBindings.
+  # +optional
+#  serviceClaims:
+#    - name: <string>
+#      ref:
+#        apiVersion: <string>
+#        kind: <string>
+#        name: <string>
