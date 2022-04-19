@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: partnertapdemo
+  name: partnertapdemo-shopping
   description: Tanzu Application Platform Demo App for Partners
   tags:
     - java
@@ -10,7 +10,7 @@ metadata:
     - tanzu
     - partnerdemo
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=partnertapdemo'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=partnertapdemo-shopping'
 spec:
   type: service
   lifecycle: production
