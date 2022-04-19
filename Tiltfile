@@ -5,7 +5,7 @@ APPNAME = os.getenv("APP_NAME", default='partnertapdemo-shopping')
 CLUSTERNAME = os.getenv("CLUSTER_NAME", default='tap11-aks-fullcluster')
 
 k8s_custom_deploy(
-    + APPNAME +,
+    APPNAME,
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --live-update" +
                " --local-path " + LOCAL_PATH +
                " --source-image " + SOURCE_IMAGE +
@@ -20,6 +20,6 @@ k8s_custom_deploy(
     ]
 )
 
-k8s_resource( + APPNAME +, port_forwards=["8080:8080"],
-            extra_pod_selectors=[{'serving.knative.dev/service': + APPNAME +}])
-allow_k8s_contexts( + CLUSTERNAME + )
+k8s_resource( APPNAME , port_forwards=["8080:8080"],
+            extra_pod_selectors=[{'serving.knative.dev/service': APPNAME }])
+allow_k8s_contexts( CLUSTERNAME )
