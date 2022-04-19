@@ -1,11 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: partnertapdemo-shopping
+  name: partnertapdemo
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
-    app.kubernetes.io/part-of: partnertapdemo-shopping
+    app.kubernetes.io/part-of: partnertapdemo
 spec:
   serviceAccountName: default
   params:
@@ -14,18 +14,18 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   - name: gitops_ssh_secret # Optional, if this is not specified during TAP installation
     value: git-secret
-  - name: gitops_repository # This parameter enable the gitops 
-    value: "https://github.com/dineshtripathi30/partnertapdemo-1"
-  - name: gitops_branch # This parameter enable the gitops 
-    value: "shopping"
-  - name: gitops_commit_message
-    value: "deliverable message from shopping dev"
+#  - name: gitops_repository # This parameter enable the gitops 
+#    value: "https://github.com/dineshtripathi30/partnertapdemo-1"
+#  - name: gitops_branch # This parameter enable the gitops 
+#    value: "shopping"
+#  - name: gitops_commit_message
+#    value: "deliverable message from shopping dev"
 #  image: ""
   source:
     git:
       url: https://github.com/dineshtripathi30/partnertapdemo
       ref: 
-        branch: shopping
+        branch: main
 #        tag: "v0.0.1"
 #        commit: "abc" 
   resources:
