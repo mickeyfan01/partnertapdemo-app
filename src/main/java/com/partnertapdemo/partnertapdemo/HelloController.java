@@ -19,7 +19,7 @@ public class HelloController {
 		return "Hey Partners, you can do some shopping here and also win prices";
 	}
 	@RequestMapping("/shopping1")
-	public String shopping() {
+	public String shopping1() {
 		return "Hey Partners, you can do some shopping here and also win prices";
 	}
 }
