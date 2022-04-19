@@ -22,14 +22,13 @@ public class HelloController {
 	public String shopping1() {
 		return "Hey Partners, you can do some shopping here and also win prices 3";
 	}
-<<<<<<< HEAD
+
 	@RequestMapping("/shopping2")
 	public String shopping2() {
 		return "Hey Partners, shopping 2";
-=======
+
 	@RequestMapping("/demo1")
 	public String demo1() {
 		return "Welcome to demo1";
->>>>>>> 43245c0e9fc3c1a75b1df3114e39f3724f751362
 	}
 }
