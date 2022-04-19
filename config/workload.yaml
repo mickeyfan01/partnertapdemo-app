@@ -1,11 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: partnertapdemo
+  name: partnertapdemo-shopping
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
-    app.kubernetes.io/part-of: partnertapdemo
+    app.kubernetes.io/part-of: partnertapdemo-shopping
 spec:
   serviceAccountName: default
   params:
@@ -16,14 +16,16 @@ spec:
     value: git-secret
   - name: gitops_repository # This parameter enable the gitops 
     value: "https://github.com/dineshtripathi30/partnertapdemo-1"
+  - name: gitops_branch # This parameter enable the gitops 
+    value: "shopping"
   - name: gitops_commit_message
-    value: "deliverable message"
+    value: "deliverable message from shopping dev"
 #  image: ""
   source:
     git:
       url: https://github.com/dineshtripathi30/partnertapdemo
       ref: 
-        branch: main
+        branch: shopping
 #        tag: "v0.0.1"
 #        commit: "abc" 
   resources:
