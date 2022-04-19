@@ -18,17 +18,4 @@ public class HelloController {
 	public String shopping() {
 		return "Hey Partners, you can do some shopping here and also win prices";
 	}
-	@RequestMapping("/shopping1")
-	public String shopping1() {
-		return "Hey Partners, you can do some shopping here and also win prices 2";
-	}
-
-	@RequestMapping("/shopping2")
-	public String shopping2() {
-		return "Hey Partners, shopping 2";
-
-	@RequestMapping("/demo1")
-	public String demo1() {
-		return "Welcome to demo1";
-	}
 }
