@@ -9,7 +9,6 @@ metadata:
     - web
     - tanzu
     - partnerdemo
-    - shopping-branch
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=partnertapdemo'
 spec:
