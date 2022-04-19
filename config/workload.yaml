@@ -1,11 +1,11 @@
 apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
-  name: partnertapdemo-shopping
+  name: partnertapdemo
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
-    app.kubernetes.io/part-of: partnertapdemo-shopping
+    app.kubernetes.io/part-of: partnertapdemo
 spec:
   serviceAccountName: default
   params:
@@ -25,7 +25,7 @@ spec:
     git:
       url: https://github.com/dineshtripathi30/partnertapdemo
       ref: 
-        branch: shopping
+        branch: main
 #        tag: "v0.0.1"
 #        commit: "abc" 
   resources:
