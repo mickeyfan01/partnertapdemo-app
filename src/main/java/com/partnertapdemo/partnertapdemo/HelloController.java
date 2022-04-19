@@ -22,4 +22,8 @@ public class HelloController {
 	public String shopping1() {
 		return "Hey Partners, you can do some shopping here and also win prices 3";
 	}
+	@RequestMapping("/shopping2")
+	public String shopping2() {
+		return "Hey Partners, shopping 2";
+	}
 }
