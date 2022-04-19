@@ -14,4 +14,8 @@ public class HelloController {
 	public String tap() {
 		return "Great to be here huh , go tanzu";
 	}
+	@RequestMapping("/shopping")
+	public String shopping() {
+		return "Hey Partners, you can do some shopping here and also win prices";
+	}
 }
