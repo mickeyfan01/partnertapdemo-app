@@ -28,6 +28,10 @@ public class HelloController {
 	}
 	@RequestMapping("/shopping3")
 	public String shopping3() {
-		return "Hey Partners shopping3, you can do some shopping here and also win price";
+		return "Hey Partners shopping3, you can do some shopping here and also win prices";
+	}
+	@RequestMapping("/shopping4")
+	public String shopping4() {
+		return "Hey Partners shopping4, you can do some shopping here and also win prices";
 	}
 }
