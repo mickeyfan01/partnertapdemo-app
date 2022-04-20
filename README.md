@@ -174,7 +174,25 @@ Updated workload "partnertapdemo-shopping"
 - Once completed, open the `partnertapdemo` app url and append `/shopping4`, you will now see the changes in your prod app
 
 
-### Work in progress
+
 ## Making more changes and testing them live on a shopping branch
+TAP makes the live updates easier with the help of `Tilt`. You can create a `Tiltfile` and with the help of Tanzu plugin, you can apply the live changes. For this, deploy `partnertapdemo-shopping` application on a different namespace and `partnertapdemo` on a separate namespace. In this example, `partnertapdemo` is deployed on a `default` namespace and `partnertapdemo-shopping` is deployed on `shopping` namespace.
+
 - Configure `Tiltfile` to reflect the `workload name`, `source image`, `namespace`, and `cluster name` correctly
--
+- Update `workload.yaml` file and point it to the `shopping` namespace and also git branch to the `shopping`
+- Deploy the `partnertapdemo-shopping` application using the following command
+```sh
+tanzu apps workload create -f config/workload.yaml
+```
+- Wait for the app to get up and running, Check the status by running the following command
+```sh
+tanzu apps workload list -n shopping
+```
+
+### Live Changes Test
+
+- In order to test the changes live, right click on the `Tiltfile` and Click `Tanzu: Live Update Starts` option
+- Make required changes in the code and Save it
+- You will notice on the terminal that the update will start syncing up 
+
+Once changes are tested successfully, you can promote the change to the main branch and workload will be updated automatically.
