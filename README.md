@@ -119,3 +119,6 @@ route.serving.knative.dev/partnertapdemo            http://partnertapdemo.defaul
 route.serving.knative.dev/partnertapdemo-shopping   http://partnertapdemo-shopping.default.tap11.tanzupartnerdemo.com   True    
 ```
 - You can verify both url's on the browser.
+
+## Making more changes and testing them live on a shopping branch
+- Configure `Tiltfile` to reflect the `workload name`, `source image`, `namespace`, and `cluster name` correctly
