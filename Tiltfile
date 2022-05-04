@@ -1,6 +1,6 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tanzudemoreg.azurecr.io/tap11/build-service/partnertapdemo-shopping-default')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tanzudemoreg.azurecr.io/tap11/build-service/partnertapdemo-shopping-shopping')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='shopping')
 APPNAME = os.getenv("APP_NAME", default='partnertapdemo-shopping')
 CLUSTERNAME = os.getenv("CLUSTER_NAME", default='tap11-aks-fullcluster')
 
