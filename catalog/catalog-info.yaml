@@ -11,7 +11,6 @@ metadata:
     - partnerdemo
   annotations:
     'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=partnertapdemo'
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=partnertapdemo-shopping'
 spec:
   type: service
   lifecycle: production
