@@ -1,0 +1,20 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  labels:
+    app.kubernetes.io/component: deliverable
+    app.kubernetes.io/part-of: partnertapdemo
+    app.tanzu.vmware.com/deliverable-type: web
+    apps.tanzu.vmware.com/workload-type: web
+    carto.run/cluster-template-name: deliverable-template
+    carto.run/resource-name: deliverable
+    carto.run/supply-chain-name: source-to-url
+    carto.run/template-kind: ClusterTemplate
+    carto.run/workload-name: partnertapdemo
+    carto.run/workload-namespace: default
+  name: partnertapdemo
+  namespace: default
+spec:
+  serviceAccountName: default
+  source:
+    image: tanzudemoreg.azurecr.io/tap11/build-service/partnertapdemo-default-bundle:aba3b2b4-96fb-48ba-b4d4-09558acfc1ee
