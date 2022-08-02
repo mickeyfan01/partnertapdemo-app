@@ -18,11 +18,11 @@ accelerator:
     label: Enter the namespace where application will be deployed
     defaultValue: default
     required: true
-  - name: Select Me
+  - name: selectMe
     display: true
     dataType: boolean
     defaultValue: true
-  - name: Enter a Message
+  - name: message
     inputType: textarea
     display: true
     defaultValue: |
