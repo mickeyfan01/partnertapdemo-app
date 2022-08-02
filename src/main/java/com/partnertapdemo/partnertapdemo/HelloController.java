@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+
 public class HelloController {
 
 	@RequestMapping("/")
@@ -36,6 +37,14 @@ public class HelloController {
 	}
 	@RequestMapping("/shopping4")
 	public String shopping4() {
-		return "Hey Partners shopping4, go ahead";
+		return "Hey Partners shopping4, go ahead and shop modern apps solutions from Adlere";
+	}
+	@RequestMapping("/shopping6")
+	public String shopping6() {
+		return "Hey Partners shopping6, test";
+	}
+	@RequestMapping("/shopping7")
+	public String shopping7() {
+		return "Hey Partners shopping7, test shopping test";
 	}
 }
