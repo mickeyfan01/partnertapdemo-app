@@ -18,7 +18,7 @@ accelerator:
     label: Enter the namespace where application will be deployed
     defaultValue: default
     required: true
-  - name: toggle
+  - name: Select Me
     display: true
     dataType: boolean
     defaultValue: true
@@ -30,7 +30,7 @@ accelerator:
       tanzu
 engine:
   merge:
-  - include: [ "**/*" ]
+ # - include: [ "**/*" ]
  #   exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml", "partnertapdemo-accelerator.yaml" ]
   - include: [ "config/*.yaml", "Tiltfile" ]
     chain:
