@@ -22,16 +22,16 @@ accelerator:
     display: true
     dataType: boolean
     defaultValue: true
-  - name: textarea
+  - name: Enter a Message
     inputType: textarea
     display: true
     defaultValue: |
-      Text line 1
-      Text line 2
+      hello
+      tanzu
 engine:
   merge:
   - include: [ "**/*" ]
-    exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml", "partnertapdemo-accelerator.yaml" ]
+ #   exclude: [ "config/*.yaml", "Tiltfile", "README.md", "catalog/*.yaml", "partnertapdemo-accelerator.yaml" ]
   - include: [ "config/*.yaml", "Tiltfile" ]
     chain:
     - type: ReplaceText
