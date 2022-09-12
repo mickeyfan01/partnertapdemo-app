@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Eknathreddy09/partnertapdemo-app
     targetRevision: HEAD
-    path: dev
+    path: /config
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
