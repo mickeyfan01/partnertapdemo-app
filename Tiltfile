@@ -1,8 +1,8 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tanzudemoreg.azurecr.io/tap11/build-service/partnertapdemo-default')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='tanzupartnerworkshop.azurecr.io/tap12/build-service/partnertapdemo-default')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='tap-install')
 APPNAME = os.getenv("APP_NAME", default='partnertapdemo')
-CLUSTERNAME = os.getenv("CLUSTER_NAME", default='tap11-aks-fullcluster')
+CLUSTERNAME = os.getenv("CLUSTER_NAME", default='tap12-aks-fullcluster')
 
 k8s_custom_deploy(
     APPNAME,
@@ -22,5 +22,5 @@ k8s_custom_deploy(
 
 k8s_resource( APPNAME , port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': APPNAME }])
-allow_k8s_contexts('tap11-aks-fullcluster')
-update_settings ( max_parallel_updates = 3 , k8s_upsert_timeout_secs = 600 , suppress_unused_image_warnings = None ) 
+update_settings ( max_parallel_updates = 3 , k8s_upsert_timeout_secs = 600 , suppress_unused_image_warnings = None )
+allow_k8s_contexts('tap12-aks-fullcluster')
