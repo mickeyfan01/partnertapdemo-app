@@ -94,7 +94,7 @@ spec:
               in: query
               schema:
                 type: string
-              example: type_any_name
+              example: Tanzu
           responses:
             '200':
               description: Auto generated using Swagger Inspector
