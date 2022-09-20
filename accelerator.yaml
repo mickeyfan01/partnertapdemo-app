@@ -1,6 +1,6 @@
 accelerator:
-  displayName: tap-demos-w02-s001
-  description: TAP Demo for Tanzu Partners: tap-demos-w02-s001
+  displayName: partnertapdemo
+  description: TAP Demo for Tanzu Partners
   iconUrl: https://raw.githubusercontent.com/dineshtripathi30/icons/master/2438322212642_50d4be51a586eb0dc065_132.png
   tags:
   - simple
