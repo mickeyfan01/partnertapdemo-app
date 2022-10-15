@@ -23,4 +23,4 @@ k8s_custom_deploy(
 k8s_resource( APPNAME , port_forwards=["8080:8080"],
             extra_pod_selectors=[{'serving.knative.dev/service': APPNAME }])
 update_settings ( max_parallel_updates = 3 , k8s_upsert_timeout_secs = 600 , suppress_unused_image_warnings = None )
-allow_k8s_contexts('tap12-aks-fullcluster')
+allow_k8s_contexts('tap13-aks-fullcluster')
