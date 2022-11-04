@@ -9,7 +9,7 @@ public class HelloController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "Welcome to the TAP Demo by Tanzu Partner SE Team";
+		return "Welcome to the TAP Demo by Tanzu Partner SE";
 	}
 	@RequestMapping("/tap")
 	public String tap() {
